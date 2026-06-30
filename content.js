@@ -49,14 +49,14 @@ const SITE = {
         { title: "College Essay Guy — EOP Requirements", url: "https://www.collegeessayguy.com/blog/eop-application-requirements-deadlines", note: "EOP deadlines by campus" }
       ],
       milestones: [
-        { date: "2026-08-17", label: "College Fit Pt. 1 (Theater)" },
-        { date: "2026-08-24", label: "College Fit Pt. 2 — CCGI login & build college list" },
-        { date: "2026-08-31", label: "College Fit Pt. 3 — Calculating GPAs" },
-        { date: "2026-09-11", label: "Brag Packet due" },
+        { date: "2026-08-17", label: "College fit sessions begin" },
+        { date: "2026-08-24", label: "Build your college list" },
+        { date: "2026-08-31", label: "Calculate your GPA" },
+        { date: "2026-09-11", label: "Brag packet due" },
         { date: "2026-10-05", label: "UC & CSU applications open" },
-        { date: "2026-10-12", label: "PIQ / EOP draft 1 due" },
-        { date: "2026-10-17", label: "All 4 PIQs due" },
-        { date: "2026-11-21", label: "Apps due over Thanksgiving Break" }
+        { date: "2026-10-12", label: "First essay draft due" },
+        { date: "2026-10-17", label: "All essays due" },
+        { date: "2026-11-21", label: "Applications due" }
       ]
     },
 
@@ -72,40 +72,40 @@ const SITE = {
         { title: "BigFuture Scholarship Search", url: "https://bigfuture.collegeboard.org/scholarship-search", note: "College Board's database" },
         { title: "Scholarships.com", url: "https://www.scholarships.com", note: "" },
         { title: "Niche Scholarships", url: "https://www.niche.com/colleges/scholarships/", note: "" },
-        { title: "SD Foundation Common Scholarship", url: "#", note: "One app, many scholarships — start here first" },
+        { title: "Local Community Scholarship Fund", url: "#", note: "One application, many scholarships" },
         { title: "WebGrants4Students", url: "https://www.webgrants4students.org/", note: "California state financial aid tracking" }
       ],
       milestones: [
-        { date: "2026-09-11", label: "Fine Print Funding application closes" },
-        { date: "2026-09-30", label: "Coca-Cola Scholars ($20,000) closes" },
-        { date: "2026-10-01", label: "QuestBridge National College Match due" },
-        { date: "2026-11-21", label: "AVID Standout Scholarship due (AVID 12 only)" },
-        { date: "2027-01-11", label: "Scholarship Log introduced — 2 apps / month begins" },
-        { date: "2027-04-12", label: "Financial Aid Package Presentation" }
+        { date: "2026-09-11", label: "Funding application closes" },
+        { date: "2026-09-30", label: "Coca-Cola Scholars due" },
+        { date: "2026-10-01", label: "QuestBridge College Match due" },
+        { date: "2026-11-21", label: "Standout scholarship applications due" },
+        { date: "2027-01-11", label: "Scholarship goal: 2 applications a month" },
+        { date: "2027-04-12", label: "Financial aid package guidance" }
       ]
     },
 
     {
       id: "finance-park",
       shortTitle: "Finance Park",
-      title: "Financial Literacy & Finance Park",
+      title: "Financial Literacy",
       accent: "teal",
       summary: "Junior Achievement Finance Park workbook units, ending in a real-world budgeting field trip.",
       season: "Jan – Mar",
       resources: [
-        { title: "JA Learn Portal", url: "https://learn.ja.org/", note: "All Finance Park theme slides live here" }
+        { title: "Financial Literacy Portal", url: "https://learn.ja.org/", note: "Workbook lessons & activities" }
       ],
       milestones: [
-        { date: "2027-01-18", label: "Workbooks distributed — financial literacy unit begins" },
-        { date: "2027-01-18", label: "Theme 1: Employment & Income" },
-        { date: "2027-01-25", label: "Theme 2: Employment & Education" },
-        { date: "2027-02-01", label: "Theme 3: Financial Decision Making" },
-        { date: "2027-02-15", label: "Theme 4: Next Level Budgeting" },
-        { date: "2027-02-22", label: "Theme 5: Risk Management & Insurance" },
-        { date: "2027-03-01", label: "Theme 6: Investing for the Future" },
-        { date: "2027-03-08", label: "Finance Park field trip — Group 1" },
-        { date: "2027-03-15", label: "Finance Park field trip — Group 2" },
-        { date: "2027-03-22", label: "Finance Park field trip — Group 3" }
+        { date: "2027-01-18", label: "Financial literacy unit begins" },
+        { date: "2027-01-18", label: "Employment & income" },
+        { date: "2027-01-25", label: "Employment & education" },
+        { date: "2027-02-01", label: "Financial decision making" },
+        { date: "2027-02-15", label: "Budgeting" },
+        { date: "2027-02-22", label: "Risk management & insurance" },
+        { date: "2027-03-01", label: "Investing for the future" },
+        { date: "2027-03-08", label: "Field trip simulation" },
+        { date: "2027-03-15", label: "Field trip simulation" },
+        { date: "2027-03-22", label: "Field trip simulation" }
       ]
     },
 
@@ -121,11 +121,11 @@ const SITE = {
         { title: "O*NET Career Clusters", url: "https://www.onetonline.org/find/career", note: "Explore careers by cluster" }
       ],
       milestones: [
-        { date: "2026-08-03", label: "Cast a Vision assignment" },
-        { date: "2026-09-07", label: "Career Presentations begin (monthly through May)" },
-        { date: "2027-01-13", label: "Community college tours (sign up for 2 sessions)" },
-        { date: "2027-02-22", label: "Trade School assignment introduced" },
-        { date: "2027-03-01", label: "Weekly Trade School guest presentations" }
+        { date: "2026-08-03", label: "Vision-setting activity" },
+        { date: "2026-09-07", label: "Guest presentations begin (monthly through May)" },
+        { date: "2027-01-13", label: "Local college campus tours" },
+        { date: "2027-02-22", label: "Trade school exploration begins" },
+        { date: "2027-03-01", label: "Weekly trade guest presentations" }
       ]
     },
 
@@ -140,10 +140,10 @@ const SITE = {
         { title: "Canva for Education", url: "https://www.canva.com/education/", note: "Resume & cover letter templates" }
       ],
       milestones: [
-        { date: "2026-11-30", label: "Work Experience Unit introduced" },
-        { date: "2026-12-09", label: "Resume due (built in Canva)" },
+        { date: "2026-11-30", label: "Unit begins" },
+        { date: "2026-12-09", label: "Resume due" },
         { date: "2026-12-16", label: "Cover letter due" },
-        { date: "2026-12-18", label: "Mock interview practice ('speed dating' format)" }
+        { date: "2026-12-18", label: "Mock interview practice" }
       ]
     },
 
@@ -155,13 +155,13 @@ const SITE = {
       summary: "A culminating presentation reflecting on the college & career planning process.",
       season: "Mar – Apr",
       resources: [
-        { title: "Senior Exhibition Rubric", url: "#", note: "Grading criteria — share with students early" },
+        { title: "Senior Exhibition Rubric", url: "#", note: "What a strong exhibition looks like" },
         { title: "Tips & Tricks Guide", url: "#", note: "Presentation skills reference" }
       ],
       milestones: [
-        { date: "2027-03-08", label: "Exhibition template & rubric introduced" },
-        { date: "2027-03-22", label: "In-class work time continues" },
-        { date: "2027-04-05", label: "Presentations begin after Spring Break" }
+        { date: "2027-03-08", label: "Guidelines introduced" },
+        { date: "2027-03-22", label: "Work time continues" },
+        { date: "2027-04-05", label: "Presentations begin" }
       ]
     },
 
@@ -176,10 +176,10 @@ const SITE = {
         { title: "LinkedIn", url: "https://www.linkedin.com", note: "Create or update your profile" }
       ],
       milestones: [
-        { date: "2027-04-05", label: "Senior Networking Event application opens" },
-        { date: "2027-04-10", label: "Networking Event application due" },
-        { date: "2027-04-26", label: "LinkedIn Profile project introduced" },
-        { date: "2027-04-28", label: "Senior Networking Event (McGriff Insurance, 11–1)" }
+        { date: "2027-04-05", label: "Networking event application opens" },
+        { date: "2027-04-10", label: "Application due" },
+        { date: "2027-04-26", label: "Profile-building project begins" },
+        { date: "2027-04-28", label: "Networking event" }
       ]
     },
 
@@ -197,7 +197,7 @@ const SITE = {
         { date: "2027-04-26", label: "Decision Day Survey opens" },
         { date: "2027-05-10", label: "Letter to Next Year's Seniors due" },
         { date: "2027-05-17", label: "Decision Day!" },
-        { date: "2027-05-24", label: "Standouts & Scholarship Ceremony / Graduation" }
+        { date: "2027-05-24", label: "Awards ceremony & graduation" }
       ]
     }
 

@@ -3,6 +3,17 @@
    edit content.js instead.
    ============================================================ */
 
+const ICONS = {
+  "college-apps": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 1 8l11 5 9-4.1V15" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10.5V16c0 1.4 3.1 3 7 3s7-1.6 7-3v-5.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  "scholarships": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1-3 2.3c0 3 6 1.4 6 4.4 0 1.4-1.3 2.5-3 2.5s-3-1-3-2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  "finance-park": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13c0-3.5 3.2-6.5 8-6.5 1 0 2 .1 2.8.4L17 5l1.5 3.2c1 .8 1.5 2 1.5 3.3 0 .6-.1 1.1-.3 1.6L21 16h-3l-1-1.6c-1 .4-2.1.6-3 .6-.8 0-1.6-.1-2.3-.3L9 17H6l1.3-2.6C4.9 13.6 3 13.4 3 13Z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="11" r=".6" fill="currentColor" stroke="none"/></svg>`,
+  "career-exploration": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.5 13 13l-3.5 1.5L11 11l3.5-1.5Z" stroke-linejoin="round"/></svg>`,
+  "work-experience": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="11" rx="1.5"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  "senior-exhibition": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.2"/><path d="M9 20h6M12 16v4M7 9.5l3 2.5 3-3.5 4 3" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  "networking-linkedin": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="8" r="2.3"/><circle cx="17" cy="6" r="2"/><circle cx="17" cy="17" r="2.3"/><path d="m8.9 9.2 6.3-2.6M8.7 9.6l6.6 6" stroke-linecap="round"/></svg>`,
+  "decision-day": `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3v18" stroke-linecap="round"/><path d="M6 4h11l-2.5 3.5L17 11H6" stroke-linejoin="round"/></svg>`
+};
+
 function fmtDate(iso){
   const d = new Date(iso + "T00:00:00");
   return d.toLocaleDateString("en-US",{month:"short",day:"numeric"});
@@ -26,11 +37,11 @@ function renderChrome(activePage){
   if(nav){
     nav.innerHTML = `
       <div class="container">
-        <a href="index.html" class="nav-brand">${SITE.courseTitle} <span>26–27</span></a>
+        <a href="index.html" class="nav-brand">${SITE.courseTitle}</a>
         <ul class="nav-links">
           <li><a href="index.html" class="${activePage==='home'?'active':''}">Home</a></li>
-          <li><a href="timeline.html" class="${activePage==='timeline'?'active':''}">Full Timeline</a></li>
-          ${SITE.units.map(u=>`<li><a href="unit.html?id=${u.id}">${u.shortTitle}</a></li>`).join("")}
+          <li><a href="timeline.html" class="${activePage==='timeline'?'active':''}">Timeline</a></li>
+          ${SITE.units.map(u=>`<li><a href="unit.html?id=${u.id}"><span class="nav-icon">${ICONS[u.id]||""}</span>${u.shortTitle}</a></li>`).join("")}
         </ul>
         <button class="nav-toggle" aria-label="Menu">&#9776;</button>
       </div>`;
@@ -39,8 +50,7 @@ function renderChrome(activePage){
   if(footer){
     footer.innerHTML = `
       <div class="container">
-        ${SITE.courseTitle} · ${SITE.schoolYear} · Edit content on
-        <a href="https://github.com/wpr-creator/cd/edit/main/content.js" target="_blank" rel="noopener">GitHub</a>
+        ${SITE.courseTitle} · ${SITE.schoolYear}
       </div>`;
   }
   mobileNavToggle();
@@ -50,12 +60,12 @@ function renderChrome(activePage){
 function renderRoadmap(){
   const track = document.getElementById("roadmap-track");
   if(!track) return;
-  track.innerHTML = SITE.units.map((u,i)=>`
-    <a class="stop" data-num="${i+1}" href="unit.html?id=${u.id}">
+  track.innerHTML = SITE.units.map((u)=>`
+    <a class="stop" href="unit.html?id=${u.id}">
+      <span class="stop-icon accent-${u.accent}">${ICONS[u.id]||""}</span>
       <div class="stop-season">${u.season}</div>
       <h3>${u.title}</h3>
       <p>${u.summary}</p>
-      <span class="tag tag-${u.accent}">${u.shortTitle}</span>
     </a>
   `).join("");
 }
@@ -73,6 +83,7 @@ function renderUnitPage(){
   header.innerHTML = `
     <div class="container">
       <a href="index.html" class="back-link">&larr; Back to roadmap</a>
+      <span class="unit-icon">${ICONS[unit.id]||""}</span>
       <div class="eyebrow">${unit.season}</div>
       <h1>${unit.title}</h1>
       <p>${unit.summary}</p>
