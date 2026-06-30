@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Development — Senior Year Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" id="site-nav"></nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Senior Career Development &middot; San Diego</div>
+    <h1>Everything you need to navigate senior year, in one place.</h1>
+    <p>College applications, scholarships, financial literacy, career exploration, and graduation — organized into one roadmap, so you always know what's next.</p>
+    <div class="hero-meta">8 units &nbsp;·&nbsp; Updated for the 2026–27 school year</div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="roadmap">
+    <h2 class="roadmap-title">Your roadmap</h2>
+    <p class="roadmap-sub">Each stop covers one part of senior year — tap a card for resources and key dates. Want everything in date order instead? See the <a href="timeline.html" style="color:var(--teal);font-weight:600;">full timeline</a>.</p>
+    <div class="roadmap-track" id="roadmap-track"></div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+<script>
+  renderChrome('home');
+  renderRoadmap();
+</script>
+</body>
+</html>

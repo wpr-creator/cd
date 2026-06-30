@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Timeline — Career Development</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" id="site-nav"></nav>
+
+<header class="unit-header" style="background:linear-gradient(135deg,var(--ink),var(--ink-soft));">
+  <div class="container">
+    <a href="index.html" class="back-link">&larr; Back to roadmap</a>
+    <div class="eyebrow">Aug 2026 — May 2027</div>
+    <h1>Full Year Timeline</h1>
+    <p>Every key date from every unit, in order. Filter by unit to focus on one part of the course.</p>
+  </div>
+</header>
+
+<main class="container section">
+  <div class="timeline-controls" id="timeline-controls"></div>
+  <div id="timeline-list"></div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+<script>
+  renderChrome('timeline');
+  renderTimelineControls();
+  renderTimeline('all');
+</script>
+</body>
+</html>
