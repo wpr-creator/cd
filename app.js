@@ -105,7 +105,48 @@ function renderUnitPage(){
   }
 }
 
-/* ---------- timeline page ---------- */
+/* ---------- this week widget ---------- */
+function renderThisWeek(){
+  const el = document.getElementById("this-week");
+  if(!el) return;
+
+  const now = new Date();
+  const day = now.getDay(); // 0=Sun
+  const monday = new Date(now);
+  monday.setHours(0,0,0,0);
+  monday.setDate(now.getDate() - ((day+6)%7)); // back to Monday
+  const sunday = new Date(monday);
+  sunday.setDate(monday.getDate()+6);
+  sunday.setHours(23,59,59,999);
+
+  let items = [];
+  SITE.units.forEach(u=>{
+    (u.milestones||[]).forEach(m=>{
+      const d = new Date(m.date + "T00:00:00");
+      if(d >= monday && d <= sunday){
+        items.push({...m, unit:u});
+      }
+    });
+  });
+  items.sort((a,b)=> a.date.localeCompare(b.date));
+
+  const rangeLabel = monday.toLocaleDateString("en-US",{month:"short",day:"numeric"}) + " – " +
+                      sunday.toLocaleDateString("en-US",{month:"short",day:"numeric"});
+
+  el.innerHTML = `
+    <h2>This Week</h2>
+    <div class="tw-sub">${rangeLabel}</div>
+    ${items.length
+      ? items.map(m=>`
+          <div class="tw-item">
+            <span class="tw-date">${fmtDate(m.date)}</span>
+            <span>${m.label} <span style="color:#9aa1b5;font-size:.82rem;">— ${m.unit.shortTitle}</span></span>
+          </div>`).join("")
+      : `<div class="tw-empty">Nothing due this week.</div>`
+    }`;
+}
+
+
 function renderTimeline(filterId){
   const wrap = document.getElementById("timeline-list");
   if(!wrap) return;

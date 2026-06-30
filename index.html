@@ -23,6 +23,9 @@
 
 <main class="container">
   <section class="roadmap">
+    <div class="this-week" id="this-week"></div>
+  </section>
+  <section class="roadmap">
     <h2 class="roadmap-title">Your roadmap</h2>
     <p class="roadmap-sub">Each stop covers one part of senior year — tap a card for resources and key dates. Want everything in date order instead? See the <a href="timeline.html" style="color:var(--teal);font-weight:600;">full timeline</a>.</p>
     <div class="roadmap-track" id="roadmap-track"></div>
@@ -33,9 +36,11 @@
 
 <script src="content.js"></script>
 <script src="app.js"></script>
+<script src="devmode.js"></script>
 <script>
   renderChrome('home');
   renderRoadmap();
+  renderThisWeek();
 </script>
 </body>
 </html>
