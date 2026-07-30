@@ -26,9 +26,12 @@
 const SITE = {
 
   // Shown at the top of the homepage
-  courseTitle: "Career Development",
-  courseTagline: "Senior Year Roadmap — College, Career & Beyond",
+  courseTitle: "CAREER DEVELOPMENT",
+  courseTagline: "SENIOR YEAR ROADMAP — COLLEGE, CAREER & BEYOND",
   schoolYear: "2026–27",
+  classroomCode: "muk2yqex",
+  classroomUrl: "https://classroom.google.com/c/ODU1NzE2NTA5Nzkw",
+  syllabusUrl: "https://docs.google.com/document/d/1goF1AmmSkFIenljsjKo__UUzKp0qB4KsWMSyfSkTdwI/edit?usp=sharing",
 
   // The 8 units. Order here = order they appear on the site & roadmap.
   units: [

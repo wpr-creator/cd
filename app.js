@@ -39,9 +39,10 @@ function renderChrome(activePage){
       <div class="container">
         <a href="index.html" class="nav-brand">${SITE.courseTitle}</a>
         <ul class="nav-links">
-          <li><a href="index.html" class="${activePage==='home'?'active':''}">Home</a></li>
-          <li><a href="timeline.html" class="${activePage==='timeline'?'active':''}">Timeline</a></li>
-          ${SITE.units.map(u=>`<li><a href="unit.html?id=${u.id}"><span class="nav-icon">${ICONS[u.id]||""}</span>${u.shortTitle}</a></li>`).join("")}
+          <li><a href="index.html" class="${activePage==='home'?'active':''}">HOME</a></li>
+          <li><a href="timeline.html" class="${activePage==='timeline'?'active':''}">TIMELINE</a></li>
+          <li><a href="${SITE.syllabusUrl}" target="_blank" rel="noopener">SYLLABUS</a></li>
+          <li><a href="${SITE.classroomUrl}" target="_blank" rel="noopener">GOOGLE CLASSROOM</a></li>
         </ul>
         <button class="nav-toggle" aria-label="Menu">&#9776;</button>
       </div>`;
@@ -50,7 +51,8 @@ function renderChrome(activePage){
   if(footer){
     footer.innerHTML = `
       <div class="container">
-        ${SITE.courseTitle} · ${SITE.schoolYear}
+        <strong>${SITE.courseTitle} · ${SITE.schoolYear}</strong>
+        <span>GOOGLE CLASSROOM CODE: <b>${SITE.classroomCode}</b></span>
       </div>`;
   }
   mobileNavToggle();
@@ -82,7 +84,7 @@ function renderUnitPage(){
   header.classList.add("unit-header","bg-"+unit.accent);
   header.innerHTML = `
     <div class="container">
-      <a href="index.html" class="back-link">&larr; Back to roadmap</a>
+      <a href="index.html" class="back-link">&larr; BACK TO ROADMAP</a>
       <span class="unit-icon">${ICONS[unit.id]||""}</span>
       <div class="eyebrow">${unit.season}</div>
       <h1>${unit.title}</h1>
@@ -91,7 +93,7 @@ function renderUnitPage(){
 
   const resWrap = document.getElementById("unit-resources");
   if(unit.resources && unit.resources.length){
-    resWrap.innerHTML = `<h2>Resources</h2><div class="resource-grid">` +
+    resWrap.innerHTML = `<h2>RESOURCES</h2><div class="resource-grid">` +
       unit.resources.map(r=>`
         <a class="resource-card" href="${r.url}" target="_blank" rel="noopener">
           <span class="arrow">&#8599;</span>
@@ -105,7 +107,7 @@ function renderUnitPage(){
   const msWrap = document.getElementById("unit-milestones");
   if(unit.milestones && unit.milestones.length){
     const sorted = [...unit.milestones].sort((a,b)=> a.date.localeCompare(b.date));
-    msWrap.innerHTML = `<h2>Key Dates</h2><ul class="milestone-list">` +
+    msWrap.innerHTML = `<h2>KEY DATES</h2><ul class="milestone-list">` +
       sorted.map(m=>`
         <li>
           <span class="milestone-date">${fmtDate(m.date)}</span>
@@ -145,15 +147,15 @@ function renderThisWeek(){
                       sunday.toLocaleDateString("en-US",{month:"short",day:"numeric"});
 
   el.innerHTML = `
-    <h2>This Week</h2>
+    <h2>THIS WEEK</h2>
     <div class="tw-sub">${rangeLabel}</div>
     ${items.length
       ? items.map(m=>`
           <div class="tw-item">
             <span class="tw-date">${fmtDate(m.date)}</span>
-            <span>${m.label} <span style="color:#9aa1b5;font-size:.82rem;">— ${m.unit.shortTitle}</span></span>
+            <span>${m.label} <span class="tw-unit">— ${m.unit.shortTitle}</span></span>
           </div>`).join("")
-      : `<div class="tw-empty">Nothing due this week.</div>`
+      : `<div class="tw-empty">NO MAJOR ROADMAP DATES THIS WEEK. CHECK GOOGLE CLASSROOM FOR CURRENT ASSIGNMENTS.</div>`
     }`;
 }
 
@@ -197,7 +199,7 @@ function renderTimeline(filterId){
 function renderTimelineControls(){
   const wrap = document.getElementById("timeline-controls");
   if(!wrap) return;
-  const chips = [{id:"all",label:"All Units"}, ...SITE.units.map(u=>({id:u.id,label:u.shortTitle}))];
+  const chips = [{id:"all",label:"ALL SECTIONS"}, ...SITE.units.map(u=>({id:u.id,label:u.shortTitle}))];
   wrap.innerHTML = chips.map((c,i)=>
     `<button class="chip ${i===0?'active':''}" data-id="${c.id}">${c.label}</button>`
   ).join("");
