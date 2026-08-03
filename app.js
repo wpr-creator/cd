@@ -41,7 +41,6 @@ function renderChrome(activePage){
         <ul class="nav-links">
           <li><a href="index.html" class="${activePage==='home'?'active':''}">HOME</a></li>
           <li><a href="agenda.html" class="${activePage==='agenda'?'active':''}">AGENDA</a></li>
-          <li><a href="timeline.html" class="${activePage==='timeline'?'active':''}">TIMELINE</a></li>
           <li><a href="${SITE.syllabusUrl}" target="_blank" rel="noopener">SYLLABUS</a></li>
           <li><a href="${SITE.classroomUrl}" target="_blank" rel="noopener">GOOGLE CLASSROOM</a></li>
         </ul>
