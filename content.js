@@ -27,6 +27,41 @@ const SITE = {
       "season": "Aug – Nov",
       "resources": [
         {
+          "title": "College Preferences Assignment",
+          "url": "https://docs.google.com/document/d/1wiQOGxxRaCVp4m7r1MLWhFFR1V6Q6EVaLH5xmM9K0zY/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "Calculate Your GPA",
+          "url": "https://docs.google.com/document/d/1qwuSTCqwpZkOXeVOjaUQiIwX2zAZcupwmhdtnSdks1A/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "Brag Packet",
+          "url": "https://docs.google.com/document/d/13sgAPsVKWmBwVw_1zX_EISYDU4sCbqwze8GNHUveKI8/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "UC PIQ & EOP Questions",
+          "url": "https://docs.google.com/document/d/18wfhcUcAlr5Zf796YEYADUA8TfE9mfywaZBFN_q5iE0/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "College Portal Login Tracker",
+          "url": "https://docs.google.com/document/d/1cLr7pUPtYKhNjziqrKyH0VaJ_INlWOvGxqguev2hsdQ/copy",
+          "note": "Keep your application logins organized"
+        },
+        {
+          "title": "PIQ Samples",
+          "url": "https://docs.google.com/document/d/1i87NmUIEvklnHGx7nNuMF6HwA3OenOotpxSFUkWdapY/view",
+          "note": "Read examples before drafting"
+        },
+        {
+          "title": "SoCal College Virtual Tours",
+          "url": "https://docs.google.com/document/d/1-uR6sXQR7fd3Ejh-Vi7NDSIorPbQc9JWU5P5Eqq2Gtg/view",
+          "note": "Explore campuses online"
+        },
+        {
           "title": "UC Application Portal",
           "url": "https://admission.universityofcalifornia.edu/apply-now.html",
           "note": "Official UC application"
@@ -60,7 +95,8 @@ const SITE = {
       "milestones": [
         {
           "date": "2026-08-17",
-          "label": "College fit sessions begin"
+          "label": "College fit sessions begin",
+          "url": "https://docs.google.com/document/d/1wiQOGxxRaCVp4m7r1MLWhFFR1V6Q6EVaLH5xmM9K0zY/copy"
         },
         {
           "date": "2026-08-24",
@@ -68,11 +104,13 @@ const SITE = {
         },
         {
           "date": "2026-08-31",
-          "label": "Calculate your GPA"
+          "label": "Calculate your GPA",
+          "url": "https://docs.google.com/document/d/1qwuSTCqwpZkOXeVOjaUQiIwX2zAZcupwmhdtnSdks1A/copy"
         },
         {
           "date": "2026-09-11",
-          "label": "Brag packet due"
+          "label": "Brag packet due",
+          "url": "https://docs.google.com/document/d/13sgAPsVKWmBwVw_1zX_EISYDU4sCbqwze8GNHUveKI8/copy"
         },
         {
           "date": "2026-10-05",
@@ -80,7 +118,8 @@ const SITE = {
         },
         {
           "date": "2026-10-12",
-          "label": "First essay draft due"
+          "label": "First essay draft due",
+          "url": "https://docs.google.com/document/d/18wfhcUcAlr5Zf796YEYADUA8TfE9mfywaZBFN_q5iE0/copy"
         },
         {
           "date": "2026-10-17",
@@ -121,8 +160,8 @@ const SITE = {
           "note": ""
         },
         {
-          "title": "Local Community Scholarship Fund",
-          "url": "#",
+          "title": "San Diego Foundation Scholarships",
+          "url": "https://www.sdfoundation.org/students/common-scholarship-application/",
           "note": "One application, many scholarships"
         },
         {
@@ -224,6 +263,31 @@ const SITE = {
       "season": "Aug – Mar",
       "resources": [
         {
+          "title": "Cast a Vision 2026",
+          "url": "https://docs.google.com/document/d/10Bh8Yu30zzgHdiXh96IDqB5hB6xwJYZ4YXDETaKpu60/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "Day 1 Relational Capacity",
+          "url": "https://docs.google.com/document/d/1yCV2o8amUCjuMxbBP0rPd0gDIo3qb7dagZvcr9KCd74/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "Design a Business Card",
+          "url": "https://docs.google.com/document/d/1BmWEvpC9PTmsOf6vvYqyp1ab2lg_XikET1Gcnug1znc/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "RIASEC & Goal-Setting Assignment",
+          "url": "https://docs.google.com/document/d/1O8QAttxH2Xp2miXBXUbwwUiZD0WRtapTi4xiaR4Zt2g/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "Trade School Research Assignment",
+          "url": "https://docs.google.com/document/d/15m4NeoAphqMZJE4opBLLGChVuR3nOWYMZICwiSXLWqM/copy",
+          "note": "Make your own copy"
+        },
+        {
           "title": "RIASEC Interest Profiler",
           "url": "https://www.mynextmove.org/explore/ip",
           "note": "Free official assessment"
@@ -237,7 +301,8 @@ const SITE = {
       "milestones": [
         {
           "date": "2026-08-03",
-          "label": "Vision-setting activity"
+          "label": "Vision-setting activity",
+          "url": "https://docs.google.com/document/d/10Bh8Yu30zzgHdiXh96IDqB5hB6xwJYZ4YXDETaKpu60/copy"
         },
         {
           "date": "2026-09-07",
@@ -249,7 +314,8 @@ const SITE = {
         },
         {
           "date": "2027-02-22",
-          "label": "Trade school exploration begins"
+          "label": "Trade school exploration begins",
+          "url": "https://docs.google.com/document/d/15m4NeoAphqMZJE4opBLLGChVuR3nOWYMZICwiSXLWqM/copy"
         },
         {
           "date": "2027-03-01",
@@ -300,19 +366,20 @@ const SITE = {
       "resources": [
         {
           "title": "Senior Exhibition Rubric",
-          "url": "#",
+          "url": "https://docs.google.com/document/d/12_ULnws_d6E_0R5C35zsUZVqBt1KGoGgxem0U-H1GFg/view",
           "note": "What a strong exhibition looks like"
         },
         {
           "title": "Tips & Tricks Guide",
-          "url": "#",
+          "url": "https://docs.google.com/document/d/1BkdHApvhiJWEEOE3X71WS2wUL1F-QT-Rpt7OlD2EkKY/view",
           "note": "Presentation skills reference"
         }
       ],
       "milestones": [
         {
           "date": "2027-03-08",
-          "label": "Guidelines introduced"
+          "label": "Guidelines introduced",
+          "url": "https://docs.google.com/document/d/12_ULnws_d6E_0R5C35zsUZVqBt1KGoGgxem0U-H1GFg/view"
         },
         {
           "date": "2027-03-22",
@@ -333,6 +400,11 @@ const SITE = {
       "season": "Apr – May",
       "resources": [
         {
+          "title": "LinkedIn Profile & Networking Assignment",
+          "url": "https://docs.google.com/document/d/1bPRgP6Ca-cRbrOYR7I1cwd4g6hUXiMz9-T0D7W4qIaQ/copy",
+          "note": "Make your own copy"
+        },
+        {
           "title": "LinkedIn",
           "url": "https://www.linkedin.com",
           "note": "Create or update your profile"
@@ -349,7 +421,8 @@ const SITE = {
         },
         {
           "date": "2027-04-26",
-          "label": "Profile-building project begins"
+          "label": "Profile-building project begins",
+          "url": "https://docs.google.com/document/d/1bPRgP6Ca-cRbrOYR7I1cwd4g6hUXiMz9-T0D7W4qIaQ/copy"
         },
         {
           "date": "2027-04-28",
@@ -366,9 +439,14 @@ const SITE = {
       "season": "Apr – May",
       "resources": [
         {
-          "title": "Naviance",
-          "url": "#",
-          "note": "Update with final college/post-grad decision"
+          "title": "Letter to Next Year's Seniors",
+          "url": "https://docs.google.com/document/d/1XCy4AIZPWhOqUdEPMiG-xsZ6GO0jkdMMZJwSYkStR-A/copy",
+          "note": "Make your own copy"
+        },
+        {
+          "title": "Update Your Naviance College List",
+          "url": "https://docs.google.com/document/d/1VBcIdqHiQspxV46826gSHVsha2I9rl4Uz-MNUUK7qjM/copy",
+          "note": "Make your own copy"
         }
       ],
       "milestones": [
@@ -378,7 +456,8 @@ const SITE = {
         },
         {
           "date": "2027-05-10",
-          "label": "Letter to Next Year's Seniors due"
+          "label": "Letter to Next Year's Seniors due",
+          "url": "https://docs.google.com/document/d/1XCy4AIZPWhOqUdEPMiG-xsZ6GO0jkdMMZJwSYkStR-A/copy"
         },
         {
           "date": "2027-05-17",

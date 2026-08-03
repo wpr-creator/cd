@@ -40,6 +40,7 @@ function renderChrome(activePage){
         <a href="index.html" class="nav-brand">${SITE.courseTitle}</a>
         <ul class="nav-links">
           <li><a href="index.html" class="${activePage==='home'?'active':''}">HOME</a></li>
+          <li><a href="agenda.html" class="${activePage==='agenda'?'active':''}">AGENDA</a></li>
           <li><a href="timeline.html" class="${activePage==='timeline'?'active':''}">TIMELINE</a></li>
           <li><a href="${SITE.syllabusUrl}" target="_blank" rel="noopener">SYLLABUS</a></li>
           <li><a href="${SITE.classroomUrl}" target="_blank" rel="noopener">GOOGLE CLASSROOM</a></li>
@@ -111,7 +112,7 @@ function renderUnitPage(){
       sorted.map(m=>`
         <li>
           <span class="milestone-date">${fmtDate(m.date)}</span>
-          <span class="milestone-label">${m.label}</span>
+          <span class="milestone-label">${m.url ? `<a href="${m.url}" target="_blank" rel="noopener">${m.label} <span aria-hidden="true">↗</span></a>` : m.label}</span>
         </li>`).join("") + `</ul>`;
   } else {
     msWrap.innerHTML = "";
@@ -153,7 +154,7 @@ function renderThisWeek(){
       ? items.map(m=>`
           <div class="tw-item">
             <span class="tw-date">${fmtDate(m.date)}</span>
-            <span>${m.label} <span class="tw-unit">— ${m.unit.shortTitle}</span></span>
+            <span>${m.url ? `<a class="date-link date-link-light" href="${m.url}" target="_blank" rel="noopener">${m.label} ↗</a>` : m.label} <span class="tw-unit">— ${m.unit.shortTitle}</span></span>
           </div>`).join("")
       : `<div class="tw-empty">NO MAJOR ROADMAP DATES THIS WEEK. CHECK GOOGLE CLASSROOM FOR CURRENT ASSIGNMENTS.</div>`
     }`;
@@ -188,7 +189,7 @@ function renderTimeline(filterId){
         <div class="tl-date">${fmtDate(m.date)}</div>
         <div class="tl-dot tag-${m.unit.accent}" style="background:var(--${m.unit.accent==='gold'?'gold-dark':m.unit.accent})"></div>
         <div class="tl-text">
-          ${m.label}
+          ${m.url ? `<a class="date-link" href="${m.url}" target="_blank" rel="noopener">${m.label} ↗</a>` : m.label}
           <div class="tl-unit">${m.unit.shortTitle}</div>
         </div>
       </div>`;

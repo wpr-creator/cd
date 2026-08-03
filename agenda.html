@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGENDA — CAREER DEVELOPMENT</title>
+<meta name="description" content="Career Development daily agenda for the Class of 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@500;600;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="nav" id="site-nav"></nav>
+
+<main class="container agenda-page">
+  <header class="agenda-heading">
+    <div>
+      <h1>AGENDA</h1>
+      <p>CAREER DEVELOPMENT · CLASS OF 2027</p>
+    </div>
+  </header>
+
+  <section class="agenda-board" aria-live="polite">
+    <article class="agenda-content">
+      <p class="agenda-label" id="agenda-label">DAILY AGENDA</p>
+      <h2 id="agenda-title">CAREER DEVELOPMENT</h2>
+      <div class="agenda-notes empty" id="agenda-notes">AGENDA COMING SOON.</div>
+    </article>
+    <aside class="agenda-date-panel" aria-label="Agenda date controls">
+      <div>
+        <p class="agenda-weekday" id="agenda-weekday"></p>
+        <time class="agenda-date" id="agenda-date"></time>
+      </div>
+      <div>
+        <div class="agenda-nav-buttons">
+          <button type="button" id="agenda-prev">← PREVIOUS</button>
+          <button type="button" id="agenda-next">NEXT →</button>
+        </div>
+        <div class="agenda-picker">
+          <label for="agenda-date-select">CHOOSE A CLASS DAY</label>
+          <select id="agenda-date-select"></select>
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<div class="admin-overlay" id="agenda-admin" hidden>
+  <section class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+    <header class="admin-header">
+      <div><p class="agenda-label">TYPE “DEV” TO OPEN OR CLOSE</p><h2 id="admin-title">AGENDA EDIT MODE</h2></div>
+      <button class="admin-close" id="admin-close" type="button" aria-label="Close editor">×</button>
+    </header>
+    <div class="admin-body">
+      <label>CLASS DAY<select id="admin-agenda-date"></select></label>
+      <label>HEADING<input id="admin-agenda-title" type="text" maxlength="80" placeholder="CAREER DEVELOPMENT"></label>
+      <label>AGENDA<textarea id="admin-agenda-notes" placeholder="TYPE TODAY'S AGENDA HERE"></textarea></label>
+      <p class="admin-note">Leave both fields blank to remove the custom agenda for this date.</p>
+
+      <div>
+        <p class="admin-note">Use a fine-grained token with <strong>Contents: Read and write</strong> access to only the <strong>cd</strong> repository. The token stays in this browser.</p>
+        <a class="admin-help" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">CREATE A FINE-GRAINED TOKEN ↗</a>
+      </div>
+      <div class="admin-token-row">
+        <label>GITHUB TOKEN<input id="admin-github-token" type="password" autocomplete="off" spellcheck="false" placeholder="PASTE TOKEN"></label>
+        <button type="button" id="admin-token-save">SAVE TOKEN</button>
+        <button type="button" id="admin-token-remove">REMOVE TOKEN</button>
+      </div>
+      <p class="admin-note" id="admin-connection-status"></p>
+      <div class="admin-actions">
+        <button type="button" id="admin-save-preview">SAVE PREVIEW</button>
+        <button class="primary" type="button" id="admin-publish">SAVE &amp; PUBLISH</button>
+        <button type="button" id="admin-reset">RESET TO LIVE</button>
+      </div>
+      <p class="admin-status" id="admin-status" role="status"></p>
+    </div>
+  </section>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="content.js"></script>
+<script src="app.js"></script>
+<script src="agenda.js"></script>
+<script>renderChrome('agenda');</script>
+</body>
+</html>
