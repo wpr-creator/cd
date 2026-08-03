@@ -176,6 +176,7 @@ a{color:inherit;}
   transition:transform .15s,box-shadow .15s;
 }
 .resource-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.resource-card-static:hover{transform:none;box-shadow:none;}
 .resource-card h4{margin:0 0 10px;font-size:1.2rem;text-transform:uppercase;letter-spacing:.01em;font-family:var(--font-display);}
 .resource-card span{font-size:1.02rem;color:var(--text);font-weight:600;}
 .resource-card .arrow{float:right;color:var(--gold-dark);font-size:1.1rem;}

@@ -94,12 +94,16 @@ function renderUnitPage(){
   const resWrap = document.getElementById("unit-resources");
   if(unit.resources && unit.resources.length){
     resWrap.innerHTML = `<h2>RESOURCES</h2><div class="resource-grid">` +
-      unit.resources.map(r=>`
+      unit.resources.map(r=>r.url ? `
         <a class="resource-card" href="${r.url}" target="_blank" rel="noopener">
           <span class="arrow">&#8599;</span>
           <h4>${r.title}</h4>
           <span>${r.note||""}</span>
-        </a>`).join("") + `</div>`;
+        </a>` : `
+        <div class="resource-card resource-card-static">
+          <h4>${r.title}</h4>
+          <span>${r.note||""}</span>
+        </div>`).join("") + `</div>`;
   } else {
     resWrap.innerHTML = "";
   }

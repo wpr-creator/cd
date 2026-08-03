@@ -28,28 +28,23 @@ const SITE = {
       "resources": [
         {
           "title": "College Preferences Assignment",
-          "url": "https://docs.google.com/document/d/1wiQOGxxRaCVp4m7r1MLWhFFR1V6Q6EVaLH5xmM9K0zY/copy",
-          "note": "Make your own copy"
+          "note": "Identify what matters most to you in a college and begin defining your best-fit options. Get the assignment in Google Classroom."
         },
         {
           "title": "Calculate Your GPA",
-          "url": "https://docs.google.com/document/d/1qwuSTCqwpZkOXeVOjaUQiIwX2zAZcupwmhdtnSdks1A/copy",
-          "note": "Make your own copy"
+          "note": "Review your courses and grades, then calculate and understand your GPA. Get the assignment in Google Classroom."
         },
         {
           "title": "Brag Packet",
-          "url": "https://docs.google.com/document/d/13sgAPsVKWmBwVw_1zX_EISYDU4sCbqwze8GNHUveKI8/copy",
-          "note": "Make your own copy"
+          "note": "Collect your accomplishments, experiences, strengths, and goals for recommendations and applications. Get the assignment in Google Classroom."
         },
         {
           "title": "UC PIQ & EOP Questions",
-          "url": "https://docs.google.com/document/d/18wfhcUcAlr5Zf796YEYADUA8TfE9mfywaZBFN_q5iE0/copy",
-          "note": "Make your own copy"
+          "note": "Choose strong personal topics and plan thoughtful responses for UC PIQ and EOP prompts. Get the assignment in Google Classroom."
         },
         {
           "title": "College Portal Login Tracker",
-          "url": "https://docs.google.com/document/d/1cLr7pUPtYKhNjziqrKyH0VaJ_INlWOvGxqguev2hsdQ/copy",
-          "note": "Keep your application logins organized"
+          "note": "Keep your application portals, usernames, deadlines, and status updates organized. Get the tracker in Google Classroom."
         },
         {
           "title": "PIQ Samples",
@@ -95,8 +90,7 @@ const SITE = {
       "milestones": [
         {
           "date": "2026-08-17",
-          "label": "College fit sessions begin",
-          "url": "https://docs.google.com/document/d/1wiQOGxxRaCVp4m7r1MLWhFFR1V6Q6EVaLH5xmM9K0zY/copy"
+          "label": "College fit sessions begin"
         },
         {
           "date": "2026-08-24",
@@ -104,13 +98,11 @@ const SITE = {
         },
         {
           "date": "2026-08-31",
-          "label": "Calculate your GPA",
-          "url": "https://docs.google.com/document/d/1qwuSTCqwpZkOXeVOjaUQiIwX2zAZcupwmhdtnSdks1A/copy"
+          "label": "Calculate your GPA"
         },
         {
           "date": "2026-09-11",
-          "label": "Brag packet due",
-          "url": "https://docs.google.com/document/d/13sgAPsVKWmBwVw_1zX_EISYDU4sCbqwze8GNHUveKI8/copy"
+          "label": "Brag packet due"
         },
         {
           "date": "2026-10-05",
@@ -118,8 +110,7 @@ const SITE = {
         },
         {
           "date": "2026-10-12",
-          "label": "First essay draft due",
-          "url": "https://docs.google.com/document/d/18wfhcUcAlr5Zf796YEYADUA8TfE9mfywaZBFN_q5iE0/copy"
+          "label": "First essay draft due"
         },
         {
           "date": "2026-10-17",
@@ -264,28 +255,23 @@ const SITE = {
       "resources": [
         {
           "title": "Cast a Vision 2026",
-          "url": "https://docs.google.com/document/d/10Bh8Yu30zzgHdiXh96IDqB5hB6xwJYZ4YXDETaKpu60/copy",
-          "note": "Make your own copy"
+          "note": "Imagine the future you want and identify goals that can move you toward it. Get the activity in Google Classroom."
         },
         {
-          "title": "Day 1 Relational Capacity",
-          "url": "https://docs.google.com/document/d/1yCV2o8amUCjuMxbBP0rPd0gDIo3qb7dagZvcr9KCd74/copy",
-          "note": "Make your own copy"
+          "title": "More Than You See",
+          "note": "Reflect on your peaks, valleys, strengths, goals, and the parts of yourself others may not immediately see. Get the activity in Google Classroom."
         },
         {
           "title": "Design a Business Card",
-          "url": "https://docs.google.com/document/d/1BmWEvpC9PTmsOf6vvYqyp1ab2lg_XikET1Gcnug1znc/copy",
-          "note": "Make your own copy"
+          "note": "Create a clear, professional business card that represents how you want to introduce yourself. Get the assignment in Google Classroom."
         },
         {
           "title": "RIASEC & Goal-Setting Assignment",
-          "url": "https://docs.google.com/document/d/1O8QAttxH2Xp2miXBXUbwwUiZD0WRtapTi4xiaR4Zt2g/copy",
-          "note": "Make your own copy"
+          "note": "Use your interest-profile results to explore career possibilities and set a meaningful goal. Get the assignment in Google Classroom."
         },
         {
           "title": "Trade School Research Assignment",
-          "url": "https://docs.google.com/document/d/15m4NeoAphqMZJE4opBLLGChVuR3nOWYMZICwiSXLWqM/copy",
-          "note": "Make your own copy"
+          "note": "Compare training programs, costs, requirements, and career outcomes for a skilled-trade pathway. Get the assignment in Google Classroom."
         },
         {
           "title": "RIASEC Interest Profiler",
@@ -301,8 +287,7 @@ const SITE = {
       "milestones": [
         {
           "date": "2026-08-03",
-          "label": "Vision-setting activity",
-          "url": "https://docs.google.com/document/d/10Bh8Yu30zzgHdiXh96IDqB5hB6xwJYZ4YXDETaKpu60/copy"
+          "label": "Vision-setting activity"
         },
         {
           "date": "2026-09-07",
@@ -314,8 +299,7 @@ const SITE = {
         },
         {
           "date": "2027-02-22",
-          "label": "Trade school exploration begins",
-          "url": "https://docs.google.com/document/d/15m4NeoAphqMZJE4opBLLGChVuR3nOWYMZICwiSXLWqM/copy"
+          "label": "Trade school exploration begins"
         },
         {
           "date": "2027-03-01",
@@ -401,8 +385,7 @@ const SITE = {
       "resources": [
         {
           "title": "LinkedIn Profile & Networking Assignment",
-          "url": "https://docs.google.com/document/d/1bPRgP6Ca-cRbrOYR7I1cwd4g6hUXiMz9-T0D7W4qIaQ/copy",
-          "note": "Make your own copy"
+          "note": "Build a professional profile and prepare to connect with adults in career fields that interest you. Get the assignment in Google Classroom."
         },
         {
           "title": "LinkedIn",
@@ -421,8 +404,7 @@ const SITE = {
         },
         {
           "date": "2027-04-26",
-          "label": "Profile-building project begins",
-          "url": "https://docs.google.com/document/d/1bPRgP6Ca-cRbrOYR7I1cwd4g6hUXiMz9-T0D7W4qIaQ/copy"
+          "label": "Profile-building project begins"
         },
         {
           "date": "2027-04-28",
@@ -440,13 +422,11 @@ const SITE = {
       "resources": [
         {
           "title": "Letter to Next Year's Seniors",
-          "url": "https://docs.google.com/document/d/1XCy4AIZPWhOqUdEPMiG-xsZ6GO0jkdMMZJwSYkStR-A/copy",
-          "note": "Make your own copy"
+          "note": "Reflect on senior year and share useful advice with the students who will follow you. Get the assignment in Google Classroom."
         },
         {
           "title": "Update Your Naviance College List",
-          "url": "https://docs.google.com/document/d/1VBcIdqHiQspxV46826gSHVsha2I9rl4Uz-MNUUK7qjM/copy",
-          "note": "Make your own copy"
+          "note": "Confirm your application results and final college decisions in Naviance. Get the assignment in Google Classroom."
         }
       ],
       "milestones": [
@@ -456,8 +436,7 @@ const SITE = {
         },
         {
           "date": "2027-05-10",
-          "label": "Letter to Next Year's Seniors due",
-          "url": "https://docs.google.com/document/d/1XCy4AIZPWhOqUdEPMiG-xsZ6GO0jkdMMZJwSYkStR-A/copy"
+          "label": "Letter to Next Year's Seniors due"
         },
         {
           "date": "2027-05-17",
