@@ -24,6 +24,17 @@ function monthKey(iso){
   return d.toLocaleDateString("en-US",{month:"long",year:"numeric"});
 }
 
+function unitDateRange(unit){
+  const dates = (unit.milestones||[]).map(m=>m.date).filter(Boolean).sort();
+  if(!dates.length) return unit.season;
+  const first = new Date(dates[0] + "T00:00:00");
+  const last = new Date(dates[dates.length-1] + "T00:00:00");
+  const short = d=>d.toLocaleDateString("en-US",{month:"short",day:"numeric"}).toUpperCase();
+  return first.getFullYear() === last.getFullYear()
+    ? `${short(first)} – ${short(last)}, ${last.getFullYear()}`
+    : `${short(first)}, ${first.getFullYear()} – ${short(last)}, ${last.getFullYear()}`;
+}
+
 function mobileNavToggle(){
   const btn = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
@@ -62,10 +73,18 @@ function renderChrome(activePage){
 function renderRoadmap(){
   const track = document.getElementById("roadmap-track");
   if(!track) return;
-  track.innerHTML = SITE.units.map((u)=>`
+  const units = [...SITE.units].sort((a,b)=>{
+    const aStart = (a.milestones||[]).map(m=>m.date).filter(Boolean).sort()[0] || "9999-12-31";
+    const bStart = (b.milestones||[]).map(m=>m.date).filter(Boolean).sort()[0] || "9999-12-31";
+    return aStart.localeCompare(bStart);
+  });
+  track.innerHTML = units.map((u,index)=>`
     <a class="stop" href="unit.html?id=${u.id}">
-      <span class="stop-icon accent-${u.accent}">${ICONS[u.id]||""}</span>
-      <div class="stop-season">${u.season}</div>
+      <div class="stop-topline">
+        <span class="stop-icon accent-${u.accent}">${ICONS[u.id]||""}</span>
+        <span class="stop-number">${String(index+1).padStart(2,"0")}</span>
+      </div>
+      <div class="stop-season">${unitDateRange(u)}</div>
       <h3>${u.title}</h3>
       <p>${u.summary}</p>
     </a>
@@ -86,7 +105,7 @@ function renderUnitPage(){
     <div class="container">
       <a href="index.html" class="back-link">&larr; BACK TO ROADMAP</a>
       <span class="unit-icon">${ICONS[unit.id]||""}</span>
-      <div class="eyebrow">${unit.season}</div>
+      <div class="eyebrow">${unitDateRange(unit)}</div>
       <h1>${unit.title}</h1>
       <p>${unit.summary}</p>
     </div>`;
